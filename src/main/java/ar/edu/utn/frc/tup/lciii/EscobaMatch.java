@@ -117,27 +117,33 @@ public class EscobaMatch {
         // TODO: Validar si algún jugador ya llegó a los 15 puntos y obtuvo mas puntos que el oponente.
         //  Si algún jugador ganó, setear el ganador en winner y mostrar el siguiente mensaje:
         //  "The player [nombre del jugador ganador] won with [puntos del jugador] points."
-        //  y retornar true si hubo un ganador.
+        //  Y retornar true si hubo un ganador.
         //  Si no hay ganador, mostrar el siguiente mensaje:
         //  "The game is not over yet."
         //  "The player [nombre del jugador humano] has [puntos del jugador humano] points."
         //  "The player [nombre del jugador APP] has [puntos del jugador app] points."
+
+        // Check if human player has won
         if (humanUserPoints > 15 && humanUserPoints > appUserPoints ) {
             setWinner(getHumanUser());
             winner.setScore(humanUserPoints);
-        } else if (appUserPoints > 15 && appUserPoints > humanUserPoints) {
+        }
+        // Check if app player has won
+        else if (appUserPoints > 15 && appUserPoints > humanUserPoints) {
             setWinner(getAppUser());
             winner.setScore(appUserPoints);
         }
 
+        // If there's a winner, print the winner details and return true
         if (getWinner() != null) {
             LetterByLetterPrinter.println("The player " + getWinner().getName() + " won with " + winner.getScore() + " points.");
             return true;
-        } else {
+        }
+        // If no winner, print the current scores and return false
+        else {
             LetterByLetterPrinter.println("The game is not over yet.");
-            LetterByLetterPrinter.println("The player " + getHumanUser().getName() + " has [puntos del jugador humano]" + getHumanUser().getScore() + " points.");
+            LetterByLetterPrinter.println("The player " + getHumanUser().getName() + " has " + getHumanUser().getScore() + " points.");
             LetterByLetterPrinter.println("The player " + getAppUser().getName() + " has " + getAppUser().getName() + " points.");
-
             return false;
         }
     }

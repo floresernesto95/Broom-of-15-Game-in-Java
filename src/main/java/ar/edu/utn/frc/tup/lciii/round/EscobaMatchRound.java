@@ -129,7 +129,7 @@ public class EscobaMatchRound {
      * @see Deck#takeCard()
      */
     public void dealCards(boolean isPlayerHumanDealer) {
-        LetterByLetterPrinter.println(System.lineSeparator() + "============================================");
+        LetterByLetterPrinter.println(System.lineSeparator() + "============================================\n");
         LetterByLetterPrinter.println("Dealing cards...");
         // TODO: Implementar lógica para repartir cartas intercaladamente una para cada jugador hasta repartir 3 a cada uno
         if (!isPlayerHumanDealer) {
@@ -166,12 +166,10 @@ public class EscobaMatchRound {
             while (humanCards.size() < 3);
         }
 
-        LetterByLetterPrinter.println("============================================" + System.lineSeparator());
+        //LetterByLetterPrinter.println("\n============================================" + System.lineSeparator());
     }
 
     /**
-     *
-     *
      * @param isPlayerDealer
      */
     public void playRound(boolean isPlayerDealer) {
@@ -186,6 +184,8 @@ public class EscobaMatchRound {
                 playerTurn = !playerTurn;
             } while (!isHandFinish()); // isHandFinish nos dice si ambos jugadores se quedaron sin cartas en la mano, sino se vuelve a jugar
             if (!isRoundFinish()) {
+                LetterByLetterPrinter.println("\n============================================\n");
+                LetterByLetterPrinter.println("Cards remaining in the deck: " + getDeck().getCards().size());
                 dealCards(isPlayerDealer);
             }
         } while (!isRoundFinish());
@@ -203,6 +203,7 @@ public class EscobaMatchRound {
      * @see EscobaMatchRound#solveQuantityCardsWinner()
      */
     private void calculateRoundScore() {
+        LetterByLetterPrinter.println("\n============================================\n");
         LetterByLetterPrinter.println("Calculating round score...");
         roundPlayerHuman.setRoundPoints(roundPlayerHuman.getRoundPoints() + roundPlayerHuman.getEscobasQuantity());
         roundPlayerApp.setRoundPoints(roundPlayerApp.getRoundPoints() + roundPlayerApp.getEscobasQuantity());

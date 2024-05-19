@@ -3,7 +3,7 @@ package ar.edu.utn.frc.tup.lciii;
 import ar.edu.utn.frc.tup.lciii.round.EscobaMatchRound;
 
 /**
- * Hello to ESCOBA DE 15
+ * Hello, ESCOBA DE 15
  *
  */
 public class App 
@@ -16,7 +16,7 @@ public class App
      * IMPORTANTE: Este método no necesita ser modificado
      */
     public static void main( String[] args ) {
-        LetterByLetterPrinter.println("Hello to Escoba de 15." + System.lineSeparator());
+        LetterByLetterPrinter.println("Hello, ESCOBA DE 15." + System.lineSeparator());
         escobaGame.welcomeMessage();
         User player = escobaGame.createHumanUser();
         User appPlayer = escobaGame.createAppUser();

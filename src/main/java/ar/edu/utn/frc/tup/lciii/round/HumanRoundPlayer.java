@@ -23,7 +23,7 @@ public class HumanRoundPlayer extends RoundPlayer {
     @Override
     public void playTurn(List<Card> tableCards) {
         LetterByLetterPrinter.println(System.lineSeparator() + "============================================");
-        LetterByLetterPrinter.println("Is PLAYER turn...");
+        LetterByLetterPrinter.println("\nIs PLAYER turn...");
         showCardsOnTheTable(tableCards);
         int rta = getCardToPlay();
 
@@ -49,7 +49,7 @@ public class HumanRoundPlayer extends RoundPlayer {
                 takingCardsFromTable(tableCards, selectedCards);
             }
         }
-        LetterByLetterPrinter.println("============================================" + System.lineSeparator());
+        LetterByLetterPrinter.println("\n============================================" + System.lineSeparator());
     }
 
     /**
@@ -77,15 +77,10 @@ public class HumanRoundPlayer extends RoundPlayer {
 
         LetterByLetterPrinter.println("This are the cards in your hand:");
         List<Card> cards = getHandCards();
-        int cont1 = cards.size();
-        int cont2 = 0;
-        int cont3 = 0;
 
-        do {
-            LetterByLetterPrinter.println(cont2++ + " - " + cards.get(cont3++));
-            cont1--;
+        for (int index = 0; index < cards.size(); index++) {
+            LetterByLetterPrinter.println(index + " - " + cards.get(index));
         }
-        while (cont1 > 0);
 
         boolean isValidRta = false;
         int rtaSelectCard = -1;

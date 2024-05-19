@@ -2,10 +2,7 @@ package ar.edu.utn.frc.tup.lciii.round;
 
 import ar.edu.utn.frc.tup.lciii.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class AppRoundPlayer extends RoundPlayer {
 
@@ -19,6 +16,7 @@ public class AppRoundPlayer extends RoundPlayer {
     public void playTurn(List<Card> tableCards) {
         LetterByLetterPrinter.println("Is APP turn...");
         showCardsOnTheTable(tableCards);
+        showCardsOnTheHand();
         List<Card> selectedCards = selectCardsApp(tableCards);
         if(selectedCards == null) {
             LetterByLetterPrinter.println("The app can't make 15 with the cards. The app, added a card to the table.");
@@ -27,6 +25,18 @@ public class AppRoundPlayer extends RoundPlayer {
             this.getHandCards().remove(cardToDiscard);
         } else {
             takingCardsFromTable(tableCards, selectedCards);
+        }
+    }
+
+    /**
+     * Método para mostrar la mano de la app
+     */
+    private void showCardsOnTheHand() {
+        LetterByLetterPrinter.println("These are the cards in the app's hand:");
+        List<Card> cards = getHandCards();
+
+        for (int index = 0; index < cards.size(); index++) {
+            LetterByLetterPrinter.println(index + " - " + cards.get(index));
         }
     }
 
@@ -67,15 +77,6 @@ public class AppRoundPlayer extends RoundPlayer {
             subconjuntos.addAll(subconjuntosAux); //Subconjuntos queda con todas las posibles combinaciones de conjuntos de las cartas de la mesa
         }
 
-        // TODO: Implementar método a partir de este punto siguiendo estas instrucciones:
-        //  1. Si subconjuntos está vacío, retornar null.
-        //  2. Ordenar subconjuntos de mayor a menor por cantidad de cartas.
-        //  3. Llamar al método getCardsWithEscoba, si retorna algo diferente de null, retornar el valor.
-        //  4. Llamar al método getCardsWithSevenOro, si retorna algo diferente de null, retornar el valor.
-        //  5. Llamar al método getCardsWithMoreOros, si retorna algo diferente de null, retornar el valor.
-        //  6. Llamar al método getCardsWithSeven, si retorna algo diferente de null, retornar el valor.
-        //  7. Si no se cumple ninguna de las condiciones anteriores, retornar el primer subconjunto con mas cartas.
-
         if (subconjuntos.size() == 0) {
             return null;
         }
@@ -104,6 +105,15 @@ public class AppRoundPlayer extends RoundPlayer {
         }
 
         return subconjuntos.get(0);
+
+        // TODO: Implementar método a partir de este punto siguiendo estas instrucciones:
+        //  1. Si subconjuntos está vacío, retornar null.
+        //  2. Ordenar subconjuntos de mayor a menor por cantidad de cartas.
+        //  3. Llamar al método getCardsWithEscoba, si retorna algo diferente de null, retornar el valor.
+        //  4. Llamar al método getCardsWithSevenOro, si retorna algo diferente de null, retornar el valor.
+        //  5. Llamar al método getCardsWithMoreOros, si retorna algo diferente de null, retornar el valor.
+        //  6. Llamar al método getCardsWithSeven, si retorna algo diferente de null, retornar el valor.
+        //  7. Si no se cumple ninguna de las condiciones anteriores, retornar el primer subconjunto con mas cartas.
     }
 
     /**
