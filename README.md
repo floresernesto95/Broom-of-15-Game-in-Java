@@ -1,7 +1,7 @@
 ### Descripción del Proyecto: "La Escoba de 15"
 
 <p align="center">
-  <img src="./docs/_images/img_1.png" alt="Diagrama"/>
+  <img src="docs/_images/Proyecto - La escoba de 15.png"/>
 </p>
 
 Bienvenido a "La Escoba de 15", un emocionante proyecto desarrollado en Java que simula el tradicional juego de cartas español "La Escoba". Este proyecto no solo pone a prueba tus habilidades de programación, sino que también proporciona una plataforma divertida y educativa para jugar y entender este clásico juego de cartas.
