@@ -40,16 +40,10 @@ El proyecto está estructurado de manera modular, con clases bien definidas que 
 - **Card**: Representación de cada carta, con su número y valor.
 - **CardSuit**: Enumera los diferentes palos de la baraja (oros, copas, espadas, bastos).
 
-#### Desarrollo y Pruebas
-
-El código incluye múltiples puntos de integración y pruebas unitarias para asegurar su correcto funcionamiento. Los métodos y clases clave están diseñados para ser fácilmente comprensibles y mantenibles, facilitando futuras expansiones y modificaciones. Las pruebas unitarias con JUnit y Mockito aseguran que cada componente funcione como se espera, incluso cuando se prueba de manera aislada.
-
-#### Conclusión
-
-"La Escoba de 15" no solo es un proyecto de juego de cartas, sino también un ejemplo sólido de cómo aplicar principios de programación orientada a objetos, diseño modular y desarrollo basado en pruebas en un proyecto real. Este proyecto es una excelente adición a tu portafolio, demostrando tus habilidades técnicas y tu capacidad para llevar a cabo proyectos completos desde la concepción hasta la implementación y las pruebas.
-
-¡Únete a nosotros en este viaje por la programación y el entretenimiento, y disfruta del desafío de "La Escoba de 15"!
-
 <p align="center">
   <img src="./docs/_images/img_1.png" alt="Diagrama"/>
 </p>
+
+#### Desarrollo y Pruebas
+
+El código incluye múltiples puntos de integración y pruebas unitarias para asegurar su correcto funcionamiento. Los métodos y clases clave están diseñados para ser fácilmente comprensibles y mantenibles, facilitando futuras expansiones y modificaciones. Las pruebas unitarias con JUnit y Mockito aseguran que cada componente funcione como se espera, incluso cuando se prueba de manera aislada.
