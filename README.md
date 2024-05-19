@@ -48,6 +48,6 @@ El proyecto está estructurado de manera modular, con clases bien definidas que 
 
 El código incluye múltiples puntos de integración y pruebas unitarias para asegurar su correcto funcionamiento. Los métodos y clases clave están diseñados para ser fácilmente comprensibles y mantenibles, facilitando futuras expansiones y modificaciones. Las pruebas unitarias con JUnit y Mockito aseguran que cada componente funcione como se espera, incluso cuando se prueba de manera aislada.
 
-####Impacto del Proyecto
+#### Impacto del Proyecto
 
 Este proyecto muestra una aplicación compleja de habilidades técnicas en Java y principios de diseño de software, con un enfoque en la creación de una experiencia de juego interactiva y atractiva. Es una demostración efectiva de la capacidad para desarrollar aplicaciones de consola que requieren una lógica de juego sofisticada y una interacción detallada con el usuario. Además, resalta la importancia de escribir código limpio y mantenible, así como la aplicación de pruebas unitarias para asegurar la calidad y fiabilidad del software.
