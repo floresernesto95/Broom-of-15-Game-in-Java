@@ -1,4 +1,4 @@
-### Descripción del Proyecto: "La Escoba de 15"
+### La Escoba de 15
 
 <p align="center">
   <img src="docs/_images/Proyecto - La escoba de 15.png"/>
